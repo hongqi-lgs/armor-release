@@ -8,11 +8,14 @@
 curl -fsSL https://raw.githubusercontent.com/hongqi-lgs/armor-release/main/install.sh | bash
 ```
 
-脚本会：下载最新包 → 解包 → 退出正在运行的 Armor → 装到 `/Applications` → 去掉隔离标记 → 启动。
+脚本会：读 `latest.json` 取版本号 → 下载 `v<版本>/Armor.app.tar.gz` → 解包 → 退出正在运行的 Armor → 装到 `/Applications` → 去掉隔离标记 → 启动。
 
 - 装到用户目录（不需要 sudo）：`ARMOR_DIR=~/Applications curl -fsSL https://raw.githubusercontent.com/hongqi-lgs/armor-release/main/install.sh | bash`
-- 手动安装：下载 [`Armor.app.tar.gz`](https://raw.githubusercontent.com/hongqi-lgs/armor-release/main/Armor.app.tar.gz)，`tar -xzf Armor.app.tar.gz -C /Applications`；也可以解包后把 `Armor.app` 拖进「应用程序」。
+- 钉版本安装（不读 `latest.json`，完全不受 CDN 缓存影响）：`curl -fsSL https://raw.githubusercontent.com/hongqi-lgs/armor-release/main/install.sh | ARMOR_VERSION=0.1.1 bash`
+- 手动安装：下载 [`v0.1.1/Armor.app.tar.gz`](https://raw.githubusercontent.com/hongqi-lgs/armor-release/main/v0.1.1/Armor.app.tar.gz)，`tar -xzf Armor.app.tar.gz -C /Applications`；也可以解包后把 `Armor.app` 拖进「应用程序」。
 - 当前版本见 [`latest.json`](https://raw.githubusercontent.com/hongqi-lgs/armor-release/main/latest.json)。
+
+下载地址按版本号分目录（`v0.1.1/Armor.app.tar.gz`），路径一旦发布就不会变；升级到新版请再跑一次上面的命令，或等应用内自动更新。
 
 ## 第一次打开
 
@@ -47,5 +50,5 @@ rm -rf ~/Library/Application\ Support/com.hongqi.armor   # 连同对话与配置
 - 只提供 arm64（Apple 芯片）包，Intel Mac 需要另打 x86_64 包
 - 未公证：首次打开需要一次手动放行（见上）
 - ad-hoc 签名：每次更新后，macOS 可能再问一次是否允许访问钥匙串，点「始终允许」即可
-- 安装包直接存放在本仓（不是 Releases），每版约占 4MB 仓体积；`latest.json` 有几分钟 CDN 缓存，刚发的版本可能稍后才被检查到
+- 安装包直接存放在本仓的 `v<版本>/` 目录（不是 Releases），每版约占 4MB 仓体积；载荷路径不可变，只有根目录 `latest.json` 有 3–4 分钟 CDN 缓存，急用可 `ARMOR_VERSION=x.y.z` 钉版本安装
 - 对话历史不做上下文压缩，长对话超过模型上下文会由服务端报错并原样显示
