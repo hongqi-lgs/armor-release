@@ -25,7 +25,7 @@ VERSION="$(curl -fsL --max-time 15 "$BASE/latest.json" \
   | sed -n 's/.*"version"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' | head -1 || true)"
 
 if [ -n "$VERSION" ]; then
-  say "→ 下载安装包（v$VERSION）"
+  say "→ 下载安装包（v${VERSION}）"
 else
   say "→ 下载安装包"
 fi
