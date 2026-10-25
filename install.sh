@@ -53,6 +53,11 @@ osascript -e 'quit app "Armor"' >/dev/null 2>&1 || true
 sleep 1
 
 say "→ 安装到 $DEST"
+# 目标目录不存在时先自己建（新机器上 ~/Applications 往往没有）。
+# 不建就直接测可写性，会被判成"不可写"而要求 sudo——说好的免 sudo 就失效了。
+if [ ! -d "$DEST" ]; then
+  mkdir -p "$DEST" 2>/dev/null || die "无法创建安装目录 ${DEST}（可用 ARMOR_DIR=~/Applications 换个位置）"
+fi
 SUDO=""
 if [ ! -w "$DEST" ]; then SUDO="sudo"; fi
 $SUDO rm -rf "$DEST/$APP"
