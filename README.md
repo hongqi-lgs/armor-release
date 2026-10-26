@@ -11,8 +11,8 @@ curl -fsSL https://raw.githubusercontent.com/hongqi-lgs/armor-release/main/insta
 脚本会：读 `latest.json` 取版本号 → 下载 `v<版本>/Armor.app.tar.gz` → 解包 → 退出正在运行的 Armor → 装到 `/Applications` → 去掉隔离标记 → 启动。
 
 - 装到用户目录（不需要 sudo）：`ARMOR_DIR=~/Applications curl -fsSL https://raw.githubusercontent.com/hongqi-lgs/armor-release/main/install.sh | bash`
-- 钉版本安装（不读 `latest.json`，完全不受 CDN 缓存影响）：`curl -fsSL https://raw.githubusercontent.com/hongqi-lgs/armor-release/main/install.sh | ARMOR_VERSION=0.1.4 bash`
-- 手动安装：下载 [`v0.1.4/Armor.app.tar.gz`](https://raw.githubusercontent.com/hongqi-lgs/armor-release/main/v0.1.4/Armor.app.tar.gz)，`tar -xzf Armor.app.tar.gz -C /Applications`；也可以解包后把 `Armor.app` 拖进「应用程序」。
+- 钉版本安装（不读 `latest.json`，完全不受 CDN 缓存影响）：`curl -fsSL https://raw.githubusercontent.com/hongqi-lgs/armor-release/main/install.sh | ARMOR_VERSION=0.1.5 bash`
+- 手动安装：下载 [`v0.1.5/Armor.app.tar.gz`](https://raw.githubusercontent.com/hongqi-lgs/armor-release/main/v0.1.5/Armor.app.tar.gz)，`tar -xzf Armor.app.tar.gz -C /Applications`；也可以解包后把 `Armor.app` 拖进「应用程序」。
 - 当前版本见 [`latest.json`](https://raw.githubusercontent.com/hongqi-lgs/armor-release/main/latest.json)。
 
 下载地址按版本号分目录（`v0.1.1/Armor.app.tar.gz`），路径一旦发布就不会变；升级到新版请再跑一次上面的命令，或等应用内自动更新。
