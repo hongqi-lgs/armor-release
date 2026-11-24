@@ -1,11 +1,11 @@
 {
-  "version": "0.2.2",
-  "notes": "Armor 0.2.2",
-  "pub_date": "2026-11-24T11:20:41.539Z",
+  "version": "0.2.3",
+  "notes": "Armor 0.2.3",
+  "pub_date": "2026-11-24T15:36:33.446Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRWJ5YWo3ZTdtRlpjTC9ya2h5S1oxckZvSS9IaklaeWJ5VU9MVEVOUUxDSVYvU0djM09INDY4a29PTHJ2eTRwMDdFZjRxSnpwa2JFcGMxV1pYZ1FBd1FIZVlUUEFZQndBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTE5MjQxCWZpbGU6QXJtb3IuYXBwLnRhci5negl2ZXJzaW9uOjAuMi4yCjVxaXVlblBSaDZOY1J6a1RaSTYzTkp1UE84V21HV2J4eWpEZ1NXdmJoT3JKUDU2MFNPcEZaVmprbFJ1dXdsOEpLT3VyVFZTV2IrbUwrVFFJL2dzTURBPT0K",
-      "url": "https://raw.githubusercontent.com/hongqi-lgs/armor-release/main/v0.2.2/Armor.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSRWJ5YWo3ZTdtRlpxSUJJMWVhMHZsYmRseXBXWjlpU0NRZFRQcFkvdjNmMVUwUUdseW5zQTZSOWpuSzMwMmxnRmNoZ1d0dW1BeiswVHh5WUIyY2pDVzVyS0tmV0l4MlF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTM0NTkzCWZpbGU6QXJtb3IuYXBwLnRhci5negl2ZXJzaW9uOjAuMi4zClFyNm1JYWR1cDVNMjZ5eGRkZG1ZMW1tOXhONWhOS1I3WmxxWlV2eE0xbEVrUGEwREpBVi9YVlN0T1o3dUlLWUYyUXBTMGhiZkNMZ0VQNi92Q1FCV0RBPT0K",
+      "url": "https://raw.githubusercontent.com/hongqi-lgs/armor-release/main/v0.2.3/Armor.app.tar.gz"
     }
   }
 }
